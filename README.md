@@ -1,4 +1,6 @@
 # course-react-namaste-react
 Namaste React Course - Akshay Saini
 
-Course Link:- https://courses.namastedev.com/learn/Namaste-React
+# Courses Link
+Javascript : https://courses.namastedev.com/learn/home/Namaste-JavaScript
+React : https://courses.namastedev.com/learn/Namaste-React
