@@ -4,16 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
     <title>Namaste React</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="header">
+      <h1>This is not root(Here no "React")</h1>
+    </div>
+    <div id="root">
+      <h1>Will be replaced by React script in method 2</h1>
+    </div>
   </body>
-  <script>
+  <!-- Method 1- JS -->
+  <!-- <script>
     const heading = document.createElement("h1");
-    heading.innerHTML = "Hello world from JS";
+    heading.innerHTML = "Hello world from JS!";
 
     const root = document.getElementById("root");
     root.appendChild(heading);
-  </script>
+  </script> -->
+
+  <!-- Method  2- React -->
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <!-- My Code Script -->
+  <script src="./app.js"></script>
 </html>
