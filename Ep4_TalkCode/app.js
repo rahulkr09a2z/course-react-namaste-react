@@ -1,44 +1,52 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React.createElement => object => HTMLElement(render)
-
 /**
- * JSX - HTML-like or XML-like syntax
- * JSX (transpiled before it reaches the JS engine) - PARCEL uses Babel
- * Babel -convert JSX -> code which understand by JS Engine
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * Body
+ *  - Search
+ *  - Restaurant Container
+ *  - Restaurant Card
+ *      - Img
+ *      - Name of Restaurant, Star, Rating, Cuisine, delivery time
+ * Footer
+ *  - Copyright
+ *  - Links
+ *  - Address
+ *  - Contact
  */
-
-// React Element
-const jsxHeading = (
-  <h1 id="heading" tabIndex="5">
-    Namaste React using JSX
-  </h1>
-);
-
-/**
- * React Component
- * Class Based Component - OLD
- * Functional Component - NEW
- */
-
-const Title = () => (
-  <h1 className="head" tabIndex="5">
-    Title Component
-  </h1>
-);
-
-const HeadingComponent = () => {
+const Header = () => {
   return (
-    <div id="container">
-      {/* Component Composition */}
-      <Title />
-      <h1>Namaste React Functional Component</h1>
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://png.pngtree.com/template/20191014/ourmid/pngtree-pin-food-delivery-map-location-delivery-logo-concept-image_318151.jpg"
+
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
     </div>
   );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// root.render(jsxHeading);
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
