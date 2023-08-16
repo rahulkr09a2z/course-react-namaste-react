@@ -43,19 +43,16 @@ Array.prototype.myFlatten = function (depth = "Infinity") {
   var arr = this;
   var newArr = [];
 
-  if (depth === "Infinity") depth = null;
   function depthDecr(depth) {
-    if (depth === null) {
-      return null;
-    }
-    return depth - 1;
+    if (depth !== "Infinity") return depth - 1;
+    return depth;
   }
 
   function flattenMethod(arr, depth) {
     depth = depthDecr(depth);
     for (let i = 0; i < arr.length; i++) {
       let item = arr[i];
-      if (Array.isArray(item) && (depth > 0 || depth === null))
+      if (Array.isArray(item) && (depth > 0 || depth === "Infinity"))
         flattenMethod(item, depth);
       else newArr.push(item);
     }
